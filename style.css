@@ -28,15 +28,15 @@ body, html {
 }
 .text-overlay {
     position: absolute;
-    top: 50%; /* Position the text overlay at the center vertically */
-    left: 50%; /* Position the text overlay at the center horizontally */
-    transform: translate(-50%, -50%); /* Center the text properly */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     text-align: start;
-    color: white; /* Text color */
+    color: white; 
   }
   
   .text-overlay h1 {
-    font-size: 2.5em; /* Adjust the heading font size */
+    font-size: 2.5em; 
     color:white;
     font-family:'Times New Roman', Times, serif;
     font-size: 45px;
@@ -44,7 +44,7 @@ body, html {
   
   
   .text-overlay p {
-    font-size: 1.2em; /* Adjust the paragraph font size */
+    font-size: 1.2em; =
     margin-bottom: 20px;
     color: greenyellow;
     font-size: 30px;
@@ -68,7 +68,7 @@ body, html {
     border: none;
     cursor: pointer;
     border-radius: 7px;
-    /* margin-left: 250px; */
+   
     
   }
   #searchContainer {
