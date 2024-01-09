@@ -3,8 +3,10 @@ const searchButton = document.getElementById("searchButton");
 const classContainer = document.getElementById("classContainer");
 const mainContainer = document.getElementById("mainContainer");
 searchButton.onclick = () => {
-  let food = searchBar.value;
-//   textData();
+ food = searchBar.value;
+ searchBar.value = '';
+
+  textData();
 console.log(food)
 textData()
 };
@@ -18,23 +20,25 @@ function getData() {
 }
 
 function displayData(inputData) {
+  
   classContainer.innerHTML = `<h2>Random Food Items</h2>
     <img id="randomFood" src="${inputData.meals[0].strMealThumb}"/>
     <h3>${inputData.meals[0].strMeal}</h3>
-    `;
-}
+     `;
+    }
 getData();
 function textData() {
-  fetch(`www.themealdb.com/api/json/v1/1/search.php?s=chicken`)
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      // listData(data);
+      listData(data);
     })
     .catch((err) => console.log(err));
 }
 
 function listData(foodData) {
+
   mainContainer.innerHTML = `<h3>Searched Food Items</h3>
     <div class="food-list">
     <div class="food-item">
@@ -70,3 +74,6 @@ function listData(foodData) {
     </div>
     `;
 }
+
+
+
